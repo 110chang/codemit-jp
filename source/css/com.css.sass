@@ -1,0 +1,134 @@
+@charset "utf-8"
+
+@import compass/css3
+@import compass/typography
+@import _config.sass
+
+/* ============================
+ * 
+ *     Reset Defaults
+ *
+ * ============================ */
+
+@import compass/reset
+
+/* ============================
+ * 
+ *     Whole Contents
+ *
+ * ============================ */
+
+html, body
+  height: 100%
+
+body
+  overflow-x: hidden
+  width: 100%
+  font-size: 100%
+  line-height: 140%
+  color: #333
+  background: #F8F8F0
+  font-family: "Source Sans Pro", sans-serif
+
+img
+  vertical-align: bottom
+  -ms-interpolation-mode: bicubic
+
+strong
+  font-weight: bold
+
+a
+  +black-link-colors
+
+.ie7 a
+  cursor: pointer
+
+input
+  font-size: 75%
+  line-height: 120%
+
+input.placeholder
+  color: #999
+
+.alpha-ro a:hover img
+  opacity: 0.5
+  filter: alpha(opacity=50)
+
+::selection
+  background: #E7373C
+  color: #FFF
+
+::-moz-selection
+  background: #E7373C
+  color: #FFF
+
+/* ============================
+ * 
+ *     Header - #masthead
+ *
+ * ============================ */
+
+#masthead
+  width: 100%
+
+/* ============================
+ * 
+ *     Contents
+ *
+ * ============================ */
+
+#main
+  height: 100%
+  position: relative
+
+#logo
+  position: absolute
+  left: 50%
+  top: 45%
+  width: 256px
+  height: 256px
+  margin: -128px auto auto -128px
+  opacity: 0
+
+  img
+    display: none
+
+.no-svg
+  #logo
+    svg
+      display: none
+    img
+      display: inline
+
+#tagline
+  position: absolute
+  top: 45%
+  width: 100%
+  margin: 128px + 40 0 0 0.25em
+  text-align: center
+  font-size: 150%
+  font-family: "Source Sans Pro", sans-serif
+  color: #E7373C
+  opacity: 0
+  cursor: default
+
+@media screen and (max-width:600px)
+  #logo
+    width: 128px
+    height: 128px
+    margin: -64px auto auto -64px
+
+  #tagline
+    margin-top: 64px + 20
+    font-size: 75%
+
+/* ============================
+ * 
+ *     Footer - #colophon
+ *
+ * ============================ */
+
+#colophon
+  width: 100%
+
+// EOF

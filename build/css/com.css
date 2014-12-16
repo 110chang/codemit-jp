@@ -1,0 +1,205 @@
+/* ============================
+ * 
+ *     Reset Defaults
+ *
+ * ============================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* ============================
+ * 
+ *     Whole Contents
+ *
+ * ============================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-size: 100%;
+  line-height: 140%;
+  color: #333333;
+  background: #f8f8f0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+img {
+  vertical-align: bottom;
+  -ms-interpolation-mode: bicubic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:focus {
+  color: #333333;
+}
+a:hover {
+  color: #333333;
+}
+a:active {
+  color: #666666;
+}
+
+.ie7 a {
+  cursor: pointer;
+}
+
+input {
+  font-size: 75%;
+  line-height: 120%;
+}
+
+input.placeholder {
+  color: #999999;
+}
+
+.alpha-ro a:hover img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+::selection {
+  background: #e7373c;
+  color: white;
+}
+
+::-moz-selection {
+  background: #e7373c;
+  color: white;
+}
+
+/* ============================
+ * 
+ *     Header - #masthead
+ *
+ * ============================ */
+#masthead {
+  width: 100%;
+}
+
+/* ============================
+ * 
+ *     Contents
+ *
+ * ============================ */
+#main {
+  height: 100%;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 256px;
+  height: 256px;
+  margin: -128px auto auto -128px;
+  opacity: 0;
+}
+#logo img {
+  display: none;
+}
+
+.no-svg #logo svg {
+  display: none;
+}
+.no-svg #logo img {
+  display: inline;
+}
+
+#tagline {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  margin: 168px 0 0 0.25em;
+  text-align: center;
+  font-size: 150%;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #e7373c;
+  opacity: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    width: 128px;
+    height: 128px;
+    margin: -64px auto auto -64px;
+  }
+
+  #tagline {
+    margin-top: 84px;
+    font-size: 75%;
+  }
+}
+/* ============================
+ * 
+ *     Footer - #colophon
+ *
+ * ============================ */
+#colophon {
+  width: 100%;
+}
