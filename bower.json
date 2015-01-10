@@ -22,6 +22,5 @@
     "tweenjs": {
       "js": "build/tween.min.js"
     }
-  },
-  "devDependencies": {}
+  }
 }
