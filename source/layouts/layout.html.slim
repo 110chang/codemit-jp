@@ -32,7 +32,10 @@ html lang="ja"
     /= javascript_include_tag 'lib/tween.min.js', :type => nil
     /= NEWLINE
     - data_main = get_data_main(current_page.data.id)
-    = javascript_include_tag 'lib/require', :type => nil, :'data-main' => data_main
+    - if build?
+      = javascript_include_tag data_main, :type => nil
+    - else
+      = javascript_include_tag 'lib/require', :type => nil, :'data-main' => data_main
     = NEWLINE
     javascript:
       (function(){var n=navigator,f=function(p,s){if(n.platform.indexOf(p)!=-1){document.write('<'+'style>body,textarea,select,option{font-family:'+s+' !important;}<'+'/style>');}};f("Win",'"メイリオ", "meiryo", "ＭＳ Ｐゴシック"');f("Mac",'"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro"');})();

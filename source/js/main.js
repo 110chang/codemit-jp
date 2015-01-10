@@ -8,9 +8,8 @@ requirejs.config({
   baseUrl: '/js',
   urlArgs: 'bust=' + (new Date()).getTime(),
   paths: {
-    'mod'      : 'mod',
-    'domReady' : 'lib/require/domReady',
-    'tween'    : 'lib/tween.min'
+    'mod'   : 'mod',
+    'tween' : 'lib/tween.min'
   }
 });
 

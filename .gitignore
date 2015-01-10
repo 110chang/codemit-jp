@@ -23,6 +23,10 @@
 # Ignore sass cache
 .cache/*
 
-#Ignore venders
+# Ignore venders
 bower_components
 node_modules
+gruntfile.js
+
+# Ignore compass sprite cache
+/**/sprite_*-s*.png
