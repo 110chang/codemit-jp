@@ -67,6 +67,9 @@ activate :directory_indexes
 # end
 
 helpers do
+  def slls(str)
+    str.gsub(/\s\/>/, '>')
+  end
   def slashless_image_tag(url, options={})
     (image_tag(url, options)).gsub /\s\/>/, '>'
   end
@@ -85,38 +88,38 @@ helpers do
     current = default if current.nil?
   end
 
-  def get_additional_style(current=nil, settings=data.styles)
-    #print settings
-    path = nil
-    settings.each do |key, value|
-      if current == key then
-        path = value
+  def get_page_styles(id=nil)
+    ids = id.split('-')
+    names = []
+    ids.size.times do |i|
+      tid = ids.take(i + 1).join('-')
+      path = "#{root}/source/css/#{tid}.css.sass"
+      if File.exist?(path)
+        names.push(tid)
       end
     end
-    return path
+
+    return names
   end
 
-  def get_data_main(current=nil, settings=data.scripts)
-    url = '/js'
-    options = {:relative => false}
-
-    if build? then
-      url << '/all'
-      options = {:relative => true}
-    else
-      url << '/main'
-    end
-
-    if settings then
-      settings.each do |id|
-        if current == id then
-          url << '-' << id
-        end
+  def get_data_main(id=nil)
+    ids = id.split('-')
+    name = ""
+    ids.size.times do |i|
+      tid = ids.take(i + 1).join('-')
+      path = "#{root}/source/js/main-#{tid}.js"
+      if File.exist?(path)
+        name = "-" + tid
       end
     end
 
-    url << '.js'
-    url = url_for(url, options)
+    if build?
+      name = "all" + name
+    else
+      name = "/js/main" + name + ".js"
+    end
+
+    return name
   end
 end
 
@@ -153,7 +156,6 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 
-  ignore "*.command"
   ignore "*.bak"
   ignore "js/build.js"
   ignore "js/build-*.js"
@@ -161,6 +163,11 @@ configure :build do
   ignore "js/main-*.js"
   ignore "js/mod"
   ignore "js/mod/*.js"
+  ignore "js/app"
+  ignore "js/app/*.js"
+  ignore "js/lib/require.js"
+  ignore "js/lib/almond.js"
+  ignore "sprite_*-s*.png"
 
 end
 
@@ -168,6 +175,12 @@ end
 #   activate :php
 # end
 
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer > 8']
+  config.cascade  = false
+  # config.inline   = true
+  # config.ignore   = ['hacks.css']
+end
 
 # Middlemanの中でbowerを使う
 # http://www.e2esound.com/wp/2013/05/09/bower_in_middleman_project/

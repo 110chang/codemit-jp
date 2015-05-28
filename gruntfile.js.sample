@@ -1,5 +1,25 @@
 module.exports = function(grunt) {
   var path = require('path');
+  var requirejsOptions = {};
+
+  // create requirejs options
+  ['main'].forEach(function(main, i) {
+    var name = 'compile' + i;
+    var all = main.replace(/^main/, "all");
+    requirejsOptions[name] = {
+      options: {
+        include: [ 'lib/almond', main ],
+        baseUrl: './source/js',
+        paths: {
+          'mod' : 'mod',
+          'tween' : 'lib/tween.min'
+        },
+        out: './source/js/' + all + '.js',
+        optimize: 'none',
+        wrap: true
+      }
+    };
+  });
 
   grunt.initConfig({
     // bowerでインストールしたライブラリをsource以下に置く
@@ -12,7 +32,7 @@ module.exports = function(grunt) {
           },
           install: true,
           verbose: false,
-          cleanTargetDir: true,
+          cleanTargetDir: false,
           cleanBowerDir: false
         }
       }
@@ -28,17 +48,7 @@ module.exports = function(grunt) {
     },
 
     // requirejs用の設定
-    requirejs: {
-      compile: {
-        options: {
-          name : 'main',  // mainで読み込むjsのpath
-          baseUrl: "./source/js",
-          mainConfigFile: './source/js/build.js',
-          out: "./source/js/all.js",
-          optimize: "none"
-        }
-      }
-    },
+    requirejs: requirejsOptions,
 
     // middlemanの設定
     middleman: {
@@ -48,9 +58,9 @@ module.exports = function(grunt) {
       server: {
         options: {
           command: "server",
-          useBundle: false,
+          useBundle: true,
           environment: "development",
-          host: "192.168.1.8",
+          host: "192.168.1.11",
           port: 4567,
           clean: true,
         }
@@ -66,7 +76,7 @@ module.exports = function(grunt) {
   //matchdepでpackage.jsonから"grunt-*"で始まる設定を読み込む
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('init', ['bower:install']);
-  grunt.registerTask('server', ['middleman:server']);
-  grunt.registerTask('build', ['requirejs:compile', 'middleman:build']);
+  grunt.registerTask('i', ['bower:install']);
+  grunt.registerTask('s', ['middleman:server']);
+  grunt.registerTask('b', ['requirejs', 'middleman:build']);
 }
