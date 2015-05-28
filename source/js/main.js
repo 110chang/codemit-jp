@@ -22,9 +22,9 @@ require([
     //console.log(TWEEN);
     var duration = 2000,
       requestId = -1,
-      $logo = $('#logo'),
+      $logo = $('#codemit-logo'),
       $paths = $('path'),
-      $tagline = $('#tagline'),
+      $tagline = $('#codemit-tagline'),
       init, loop;
 
     if (!Modernizr.svg) {

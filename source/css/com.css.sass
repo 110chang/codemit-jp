@@ -81,14 +81,13 @@ input.placeholder
   height: 100%
   position: relative
 
-#logo
+.logo
   position: absolute
   left: 50%
   top: 45%
   width: 256px
   height: 256px
   margin: -128px auto auto -128px
-  opacity: 0
 
   img
     display: none
@@ -100,17 +99,64 @@ input.placeholder
     img
       display: inline
 
-#tagline
+.tagline
   position: absolute
   top: 45%
   width: 100%
-  margin: 128px + 40 0 0 0.25em
+  margin: 128px + 40 0 0 0
   text-align: center
-  font-size: 150%
-  font-family: "Source Sans Pro", sans-serif
-  color: #E7373C
-  opacity: 0
   cursor: default
+  p
+    font-size: 150%
+    font-family: "Source Sans Pro", sans-serif
+    color: #E7373C
+
+.page
+  position: relative
+  width: 100vw
+  height: 100vh
+
+#codemit
+  .logo
+    opacity: 0
+  .tagline
+    margin: 128px + 40 0 0 0.25em
+    opacity: 0
+
+#dokokara
+  background: #29CA83
+  .tagline
+    p
+      font-family: "Montserrat", sans-serif
+      letter-spacing: 1px
+      font-size: 2.2rem
+      line-height: 140%
+      color: #FFF
+
+#metloc
+  background: #FFF
+  .logo
+    width: 416px
+    height: 160px
+    margin: -80px auto auto -208px
+
+$oyatsu-color: #FF6140
+$oyatsu-lite: #FF8B73
+$oyatsu-pale: #FFEBE7
+#oyatsu
+  background: $oyatsu-color
+  background-color: $oyatsu-color
+  background-image: linear-gradient(45deg, $oyatsu-lite 25%, transparent 25%, transparent 75%, $oyatsu-lite 75%, $oyatsu-lite), linear-gradient(45deg, $oyatsu-lite 25%, transparent 25%, transparent 75%, $oyatsu-lite 75%, $oyatsu-lite)
+  background-size: 60px 60px
+  background-position: 0 0, 30px 30px
+  .logo
+    width: 450px
+    height: 180px
+    margin: -90px auto auto -225px
+  .tagline
+    p
+      color: #FFF
+      font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO"
 
 @media screen and (max-width:600px)
   #logo
