@@ -7,6 +7,7 @@ html lang="ja"
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
+    meta name="mobile-web-app-capable" content="yes"
     title = current_page.data.title || "mysite"
     meta name="keywords" content="#{current_page.data.keywords}"
     meta name="description" content="#{current_page.data.description}"
@@ -15,6 +16,7 @@ html lang="ja"
     /
     / styles
     /
+    link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'
     link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'
     = NEWLINE
@@ -29,20 +31,13 @@ html lang="ja"
     /
     = javascript_include_tag "lib/modernizr", type: nil
     = NEWLINE
-    = javascript_include_tag "lib/jquery.min", type: nil
-    = NEWLINE
-    = javascript_include_tag "lib/jquery.easing", type: nil
-    = NEWLINE
     - data_main = get_data_main(current_page.data.id)
-    - if build?
-      = javascript_include_tag "#{data_main}", type: nil
-    - else
-      = javascript_include_tag "lib/require", type: nil, :'data-main' => data_main
+    = javascript_include_tag "#{data_main}", type: nil
     = NEWLINE
     /
     / others
     /
-    = slashless_favicon_tag 'img/favicon.ico', :rel => "shortcut icon", :type => nil
+    = slls favicon_tag('img/favicon.ico', rel: "shortcut icon", type: nil)
   = NEWLINE
   body id="#{current_page.data.id}" class="cat-#{current_page.data.category}"
     /- if build? 

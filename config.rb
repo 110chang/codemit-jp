@@ -70,17 +70,6 @@ helpers do
   def slls(str)
     str.gsub(/\s\/>/, '>')
   end
-  def slashless_image_tag(url, options={})
-    (image_tag(url, options)).gsub /\s\/>/, '>'
-  end
-
-  def slashless_css_link_tag(*source)
-    (stylesheet_link_tag(*source)).gsub /\s\/>/, '>'
-  end
-
-  def slashless_favicon_tag(*source)
-    (favicon_tag(*source)).gsub /\s\/>/, '>'
-  end
 
   def get_meta(type, default=data.default)
     current = current_page.data[type]
@@ -113,13 +102,7 @@ helpers do
       end
     end
 
-    if build?
-      name = "all" + name
-    else
-      name = "/js/main" + name + ".js"
-    end
-
-    return name
+    name = "all" + name
   end
 end
 

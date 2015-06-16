@@ -18,12 +18,16 @@
  *
  * ============================ */
 
+$key-blue: #0085C0
+$sub-red: #E7373C
+
 html, body
   height: 100%
 
 body
   overflow-x: hidden
   width: 100%
+  height: 100%
   font-size: 100%
   line-height: 140%
   color: #333
@@ -38,10 +42,7 @@ strong
   font-weight: bold
 
 a
-  +black-link-colors
-
-.ie7 a
-  cursor: pointer
+  +link-colors($key-blue, $sub-red, $sub-red, $key-blue, $sub-red)//n-h-a-v-f
 
 input
   font-size: 75%
@@ -49,10 +50,6 @@ input
 
 input.placeholder
   color: #999
-
-.alpha-ro a:hover img
-  opacity: 0.5
-  filter: alpha(opacity=50)
 
 ::selection
   background: #E7373C
@@ -70,6 +67,7 @@ input.placeholder
 
 #masthead
   width: 100%
+  height: 100%
 
 /* ============================
  * 
@@ -81,19 +79,23 @@ input.placeholder
   height: 100%
   position: relative
 
+.page
+  position: relative
+  width: 100%
+  height: 100%
+  width: 100vw
+  height: 100vh
+
 .logo
   position: absolute
   left: 50%
-  top: 45%
-  width: 256px
-  height: 256px
-  margin: -128px auto auto -128px
-
+  top: 50%
+  opacity: 0
   img
     display: none
 
 .no-svg
-  #logo
+  .logo
     svg
       display: none
     img
@@ -101,72 +103,97 @@ input.placeholder
 
 .tagline
   position: absolute
-  top: 45%
+  bottom: 10%
   width: 100%
-  margin: 128px + 40 0 0 0
   text-align: center
   cursor: default
   p
-    font-size: 150%
+    font-size: 100%
     font-family: "Source Sans Pro", sans-serif
     color: #E7373C
 
-.page
-  position: relative
-  width: 100vw
-  height: 100vh
+.outbound
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 40px
+  height: 40px
+  //background: #FCC
+  a
+    display: block
+    width: 40px
+    height: 40px
+    text-align: center
+    line-height: 40px
+
+
+/* ===== codemit.jp ===== */
 
 #codemit
   .logo
-    opacity: 0
-  .tagline
-    margin: 128px + 40 0 0 0.25em
-    opacity: 0
+    width: 128px
+    height: 128px
+    margin: -64px
+
+
+/* ===== dokokara.info ===== */
+
+$dkr-green: #29CA83
+$dkr-pale: tint($dkr-green, 90)
 
 #dokokara
-  background: #29CA83
+  background: $dkr-green
+  color: #FFF
+  a
+    +link-colors(#FFF, $dkr-pale, $dkr-pale, #FFF, $dkr-pale)//n-h-a-v-f
+  .logo
+    width: 110px
+    height: 110px
+    margin: -55px
   .tagline
     p
       font-family: "Montserrat", sans-serif
       letter-spacing: 1px
-      font-size: 2.2rem
-      line-height: 140%
       color: #FFF
+
+/* ===== metloc.info ===== */
+
+$metloc-color: #00182C
+$metloc-lite: tint($metloc-color, 20)
 
 #metloc
   background: #FFF
+  color: $metloc-color
+  a
+    +link-colors($metloc-color, $metloc-lite, $metloc-lite, $metloc-color, $metloc-lite)//n-h-a-v-f
   .logo
-    width: 416px
-    height: 160px
-    margin: -80px auto auto -208px
+    width: 206px
+    height: 80px
+    margin: -40px -103px
+
+
+/* ===== oyatsu ===== */
 
 $oyatsu-color: #FF6140
 $oyatsu-lite: #FF8B73
 $oyatsu-pale: #FFEBE7
+
 #oyatsu
-  background: $oyatsu-color
-  background-color: $oyatsu-color
-  background-image: linear-gradient(45deg, $oyatsu-lite 25%, transparent 25%, transparent 75%, $oyatsu-lite 75%, $oyatsu-lite), linear-gradient(45deg, $oyatsu-lite 25%, transparent 25%, transparent 75%, $oyatsu-lite 75%, $oyatsu-lite)
-  background-size: 60px 60px
-  background-position: 0 0, 30px 30px
+  background: $oyatsu-lite
+  color: #FFF
+  a
+    +link-colors(#FFF, $oyatsu-pale, $oyatsu-pale, #FFF, $oyatsu-pale)//n-h-a-v-f
   .logo
-    width: 450px
-    height: 180px
-    margin: -90px auto auto -225px
+    width: 200px
+    height: 80px
+    margin: -40px -100px
   .tagline
     p
       color: #FFF
-      font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO"
+      font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO"
 
-@media screen and (max-width:600px)
-  #logo
-    width: 128px
-    height: 128px
-    margin: -64px auto auto -64px
+@media screen and (min-width:600px)
 
-  #tagline
-    margin-top: 64px + 20
-    font-size: 75%
 
 /* ============================
  * 

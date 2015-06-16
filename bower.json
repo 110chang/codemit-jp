@@ -7,11 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "2",
     "modernizr": "~2.8.3",
-    "jquery.easing": "~1.3.0",
-    "requirejs": "~2.1.14",
-    "almond": "~0.3.0",
     "tweenjs": "*"
   },
   "exportsOverride": {
@@ -20,10 +16,6 @@
     },
     "tweenjs": {
       "js": "build/tween.min.js"
-    },
-    "jquery": {
-      "js": "**/jquery.min.js",
-      "map": "**/jquery.min.map"
     }
   }
 }
