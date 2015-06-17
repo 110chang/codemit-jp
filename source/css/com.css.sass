@@ -21,6 +21,10 @@
 $key-blue: #0085C0
 $sub-red: #E7373C
 
+$font-marugo: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo"
+
+$font-hiraw1: ".HiraKakuInterface-W1", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro"
+
 html, body
   height: 100%
 
@@ -86,6 +90,14 @@ input.placeholder
   width: 100vw
   height: 100vh
 
+.page-title
+  padding: 1em 0
+  font-size: 150%
+  line-height: 140%
+  text-align: center
+  color: $key-blue
+  font-family: $font-hiraw1
+
 .logo
   position: absolute
   left: 50%
@@ -134,6 +146,22 @@ input.placeholder
     width: 128px
     height: 128px
     margin: -64px
+
+#goto-contact
+  position: absolute
+  left: 50%
+  bottom: 10%
+  width: auto
+  margin-left: -3.25em
+  padding: 0.25em 1em
+  border-radius: 4px
+  text-align: center
+  font-family: $font-marugo
+  background: $key-blue
+  color: #FFF
+  cursor: pointer
+  .fa
+    margin-right: 0.25em
 
 
 /* ===== dokokara.info ===== */
@@ -190,18 +218,132 @@ $oyatsu-pale: #FFEBE7
   .tagline
     p
       color: #FFF
-      font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO"
+      font-family: $font-marugo
 
-@media screen and (min-width:600px)
+
+/* ===== contact ===== */
+
+#contact
+  font-family: $font-marugo
+
+.com-form
+  .form-section
+    padding: 0
+    //border-top: 1px solid #CCC
+    &:first-child
+      border-top: 0
+  .form-action
+    padding: 10px
+  label
+    box-sizing: border-box
+    display: block
+    padding: 0.25em 0.35em
+    color: $key-blue
+    font-size: 0.75rem
+    line-height: 140%
+  input, textarea
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    box-sizing: border-box
+    display: block
+    width: 100%
+    margin-bottom: 0.5em
+    padding: 0.25em
+    border: 0
+    background: transparent
+    font-family: $font-marugo
+    font-size: 100%
+    line-height: 140%
+    background: #FFF
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder
+    color: #999
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder
+    color: #999
+
+  input:-ms-placeholder,
+  textarea:-ms-placeholder
+    color: #999
+
+  input[type=submit]
+    width: 100%
+    padding: 0.5em
+    background: $sub-red
+    color: #FFF
+    border-radius: 4px
+    letter-spacing: 1em
+    text-indent: 1em
+    font-weight: bold
 
 
 /* ============================
  * 
- *     Footer - #colophon
+ *     Tablet, PC
  *
  * ============================ */
 
-#colophon
-  width: 100%
+@media screen and (min-width:767px)
+    
+  .tagline
+    p
+      font-size: 200%
+      line-height: 140%
+
+  /* ===== codemit.jp ===== */
+
+  #codemit
+    .logo
+      width: 256px
+      height: 256px
+      margin: -128px
+
+  /* ===== dokokara.info ===== */
+
+  #dokokara
+    .logo
+      width: 220px
+      height: 220px
+      margin: -110px
+
+  /* ===== metloc.info ===== */
+
+  #metloc
+    .logo
+      width: 412px
+      height: 160px
+      margin: -80px -206px
+
+
+  /* ===== oyatsu ===== */
+
+  #oyatsu
+    .logo
+      width: 400px
+      height: 160px
+      margin: -80px -200px
+
+
+  /* ===== contact ===== */
+
+  .com-form
+    .form-section
+      width: 100%
+      padding: 0.5em 0
+    .form-action
+      padding: 10px 0
+    label
+      width: 50%
+      margin: 0 auto
+    input, textarea
+      width: 50%
+      margin: 0 auto
+
+    input[type=submit]
+      width: 50%
+
 
 // EOF

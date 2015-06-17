@@ -18,6 +18,9 @@ section#codemit.page
   #codemit-tagline.tagline
     p
       | HTML CSS JavaScript
+  bg#goto-contact
+    i.fa.fa-envelope-o
+    | お問合せ
 
 section#dokokara.page
   #dokokara-logo.logo
@@ -46,5 +49,26 @@ section#oyatsu.page
   .outbound
     - link_to "http://o8.110chang.com"
       i.fa.fa-external-link
+
+section#contact.page
+  h1.page-title
+    i.fa.fa-envelope-o
+    | お問合せ
+  form action="//formspree.io/yuji.ito@codemit.jp" method="POST" class="com-form"
+    section.form-section
+      label for="form-name"
+        | お名前
+      input type="text" name="name" id="form-name" placeholder="高土　栄三"
+    section.form-section
+      label for="form-email"
+        | メールアドレス
+      input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com"
+    section.form-section
+      label for="form-question"
+        | お問合せ内容
+      textarea name="question" id="form-question" placeholder="お問い合わせ内容を入力してください" rows="3"
+    input type="text" name="_gotcha" style="display:none"
+    section.form-action
+      input type="submit" value="送信"
 
 /
