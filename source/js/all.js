@@ -55,6 +55,11 @@ var Router = require('./router');
 var StartWheelEvent = require('./startwheelevent');
 var TouchStartFirst = require('./touchstartfirst');
 
+function iOS_gte7() {
+  var v = /(iPhone|iPad|iPod touch); CPU (iPhone )?OS ([0-9]{1,2})_/.exec(navigator.userAgent);
+  console.log(v);
+  return v && v.pop() * 1 >= 7;
+}
 
 $(function() {
   console.log('dom ready.');
@@ -71,9 +76,11 @@ $(function() {
     var $tagline = $area.children('.tagline').fadeOut(0);
     var svg = new SVGLineAnimator($logo, cfg.svgOptions);
 
-    // http://yami-beta.hateblo.jp/entry/2014/11/13/223859
-    $area.height(window.innerHeight);
-    
+    if (iOS_gte7()) {
+      // http://yami-beta.hateblo.jp/entry/2014/11/13/223859
+      $area.height(window.innerHeight);
+    }
+
     svg.on('animationFinished', function() {
       $tagline.fadeIn(500);
     });
