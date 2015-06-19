@@ -72,6 +72,7 @@ html, body {
 body {
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
   font-size: 100%;
   line-height: 140%;
   color: #333333;
@@ -89,23 +90,19 @@ strong {
 }
 
 a {
-  color: black;
+  color: #0085c0;
 }
 a:visited {
-  color: black;
+  color: #0085c0;
 }
 a:focus {
-  color: #333333;
+  color: #e7373c;
 }
 a:hover {
-  color: #333333;
+  color: #e7373c;
 }
 a:active {
-  color: #666666;
-}
-
-.ie7 a {
-  cursor: pointer;
+  color: #e7373c;
 }
 
 input {
@@ -115,11 +112,6 @@ input {
 
 input.placeholder {
   color: #999999;
-}
-
-.alpha-ro a:hover img {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 ::-moz-selection {
@@ -139,15 +131,6 @@ input.placeholder {
 
 /* ============================
  * 
- *     Header - #masthead
- *
- * ============================ */
-#masthead {
-  width: 100%;
-}
-
-/* ============================
- * 
  *     Contents
  *
  * ============================ */
@@ -156,107 +139,384 @@ input.placeholder {
   position: relative;
 }
 
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-title {
+  padding: 1em 0;
+  font-size: 150%;
+  line-height: 140%;
+  text-align: center;
+  color: #0085c0;
+  font-family: ".HiraKakuInterface-W1", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro";
+}
+.page-title .fa {
+  margin-right: 0.25em;
+}
+
 .logo {
   position: absolute;
   left: 50%;
-  top: 45%;
-  width: 256px;
-  height: 256px;
-  margin: -128px auto auto -128px;
+  top: 50%;
+  opacity: 0;
 }
 .logo img {
   display: none;
 }
 
-.no-svg #logo svg {
+.no-svg .logo svg {
   display: none;
 }
-.no-svg #logo img {
+.no-svg .logo img {
   display: inline;
 }
 
 .tagline {
   position: absolute;
-  top: 45%;
+  top: 20%;
   width: 100%;
-  margin: 168px 0 0 0;
   text-align: center;
   cursor: default;
 }
 .tagline p {
-  font-size: 150%;
+  font-size: 100%;
   font-family: "Source Sans Pro", sans-serif;
   color: #e7373c;
 }
 
-.page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+.outbound {
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  width: 100%;
+  min-width: 60px;
+  min-height: 60px;
+  margin: 0;
+  text-align: center;
+}
+.outbound a {
+  display: inline-block;
+  min-width: 60px;
+  min-height: 60px;
+  text-align: center;
+  font-size: 150%;
+  line-height: 60px;
+  text-decoration: none;
 }
 
+.outbound-label {
+  display: none;
+}
+
+.inline-outbound {
+  font-size: 75%;
+}
+
+/* ===== codemit.jp ===== */
 #codemit .logo {
-  opacity: 0;
-}
-#codemit .tagline {
-  margin: 168px 0 0 0.25em;
-  opacity: 0;
+  width: 128px;
+  height: 128px;
+  margin: -64px;
 }
 
+#goto-contact {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: auto;
+  margin-left: -3.25em;
+  padding: 0.25em 1em;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
+  background: #0085c0;
+  color: white;
+  cursor: pointer;
+}
+#goto-contact .fa {
+  margin-right: 0.25em;
+}
+
+/* ===== dokokara.info ===== */
 #dokokara {
   background: #29ca83;
+  color: white;
+}
+#dokokara a {
+  color: white;
+}
+#dokokara a:visited {
+  color: white;
+}
+#dokokara a:focus {
+  color: #e9f9f2;
+}
+#dokokara a:hover {
+  color: #e9f9f2;
+}
+#dokokara a:active {
+  color: #e9f9f2;
+}
+#dokokara .logo {
+  width: 110px;
+  height: 110px;
+  margin: -55px;
 }
 #dokokara .tagline p {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  font-size: 2.2rem;
-  line-height: 140%;
   color: white;
 }
 
+/* ===== metloc.info ===== */
 #metloc {
   background: white;
+  color: #00182c;
+}
+#metloc a {
+  color: #00182c;
+}
+#metloc a:visited {
+  color: #00182c;
+}
+#metloc a:focus {
+  color: #334656;
+}
+#metloc a:hover {
+  color: #334656;
+}
+#metloc a:active {
+  color: #334656;
 }
 #metloc .logo {
-  width: 416px;
-  height: 160px;
-  margin: -80px auto auto -208px;
+  width: 206px;
+  height: 80px;
+  margin: -40px -103px;
 }
 
+/* ===== oyatsu ===== */
 #oyatsu {
-  background: #ff6140;
-  background-color: #ff6140;
-  background-image: linear-gradient(45deg, #ff8b73 25%, transparent 25%, transparent 75%, #ff8b73 75%, #ff8b73), linear-gradient(45deg, #ff8b73 25%, transparent 25%, transparent 75%, #ff8b73 75%, #ff8b73);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
+  background: #ff8b73;
+  color: white;
+}
+#oyatsu a {
+  color: white;
+}
+#oyatsu a:visited {
+  color: white;
+}
+#oyatsu a:focus {
+  color: #ffebe7;
+}
+#oyatsu a:hover {
+  color: #ffebe7;
+}
+#oyatsu a:active {
+  color: #ffebe7;
 }
 #oyatsu .logo {
-  width: 450px;
-  height: 180px;
-  margin: -90px auto auto -225px;
+  width: 200px;
+  height: 80px;
+  margin: -40px -100px;
 }
 #oyatsu .tagline p {
   color: white;
-  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
 }
 
-@media screen and (max-width: 600px) {
-  #logo {
-    width: 128px;
-    height: 128px;
-    margin: -64px auto auto -64px;
-  }
-
-  #tagline {
-    margin-top: 84px;
-    font-size: 75%;
-  }
+/* ===== about ===== */
+#about p {
+  margin: 1em;
 }
+
+/* ===== contact ===== */
+#contact {
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
+}
+
+.com-form .form-section {
+  padding: 0;
+}
+.com-form .form-section:first-child {
+  border-top: 0;
+}
+.com-form .form-action {
+  padding: 10px;
+}
+.com-form label {
+  box-sizing: border-box;
+  display: block;
+  padding: 0.25em 0.35em;
+  color: #0085c0;
+  font-size: 0.75rem;
+  line-height: 140%;
+}
+.com-form input, .com-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: 0.25em;
+  border: 0;
+  background: transparent;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
+  font-size: 100%;
+  line-height: 140%;
+  background: white;
+}
+.com-form input::-webkit-input-placeholder,
+.com-form textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+.com-form input::-moz-placeholder,
+.com-form textarea::-moz-placeholder {
+  color: #999999;
+}
+.com-form input:-ms-placeholder,
+.com-form textarea:-ms-placeholder {
+  color: #999999;
+}
+.com-form input[type=submit] {
+  width: 100%;
+  padding: 0.5em;
+  background: #e7373c;
+  color: white;
+  border-radius: 4px;
+  letter-spacing: 1em;
+  text-indent: 1em;
+  font-weight: bold;
+}
+
+/* ===== footer ===== */
+#global-nav {
+  position: fixed;
+  left: 0;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: -0.35em;
+}
+#global-nav li {
+  display: inline-block;
+  margin: 0 10px;
+  letter-spacing: 0;
+}
+#global-nav a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #0085c0;
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+#global-nav a:visited {
+  color: white;
+}
+#global-nav a:focus {
+  color: white;
+}
+#global-nav a:hover {
+  color: white;
+}
+#global-nav a:active {
+  color: white;
+}
+#global-nav a:hover, #global-nav a:active {
+  background: white;
+  color: #e7373c;
+}
+#global-nav .gnav-label {
+  display: none;
+}
+
 /* ============================
  * 
- *     Footer - #colophon
+ *     Tablet, PC
  *
  * ============================ */
-#colophon {
-  width: 100%;
+@media screen and (min-width: 767px) {
+  .page-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .tagline p {
+    font-size: 200%;
+    line-height: 140%;
+  }
+
+  .outbound-label {
+    display: inline;
+    margin-left: 0.25em;
+  }
+
+  /* ===== codemit.jp ===== */
+  #codemit .logo {
+    width: 256px;
+    height: 256px;
+    margin: -128px;
+  }
+
+  /* ===== dokokara.info ===== */
+  #dokokara .logo {
+    width: 220px;
+    height: 220px;
+    margin: -110px;
+  }
+
+  /* ===== metloc.info ===== */
+  #metloc .logo {
+    width: 412px;
+    height: 160px;
+    margin: -80px -206px;
+  }
+
+  /* ===== oyatsu ===== */
+  #oyatsu .logo {
+    width: 400px;
+    height: 160px;
+    margin: -80px -200px;
+  }
+
+  /* ===== contact ===== */
+  .com-form .form-section {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+  .com-form .form-action {
+    padding: 10px 0;
+  }
+  .com-form label {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .com-form input, .com-form textarea {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .com-form input[type=submit] {
+    width: 50%;
+  }
+
+  #global-nav a {
+    width: auto;
+    padding: 0 15px;
+  }
+  #global-nav .gnav-label {
+    display: inline;
+    margin-left: 0.25em;
+  }
 }

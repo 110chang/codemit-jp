@@ -18,9 +18,6 @@ section#codemit.page
   #codemit-tagline.tagline
     p
       | HTML CSS JavaScript
-  bg#goto-contact
-    i.fa.fa-envelope-o
-    | お問合せ
 
 section#dokokara.page
   #dokokara-logo.logo
@@ -30,15 +27,19 @@ section#dokokara.page
     p
       | Dokokara.info
   .outbound
-    - link_to "http://dokokara.info"
+    - link_to "http://dokokara.info", target: "_blank"
       i.fa.fa-external-link
+      span.outbound-label
+        | Dokokara.infoを見る
 
 section#metloc.page
   #metloc-logo.logo
     = partial "logo_metloc"
   .outbound
-    - link_to "http://metloc.info"
+    - link_to "http://metloc.info", target: "_blank"
       i.fa.fa-external-link
+      span.outbound-label
+        | metloc.infoを見る
 
 section#oyatsu.page
   #oyatsu-logo.logo
@@ -47,14 +48,31 @@ section#oyatsu.page
     p
       | おやつ3賢人
   .outbound
-    - link_to "http://o8.110chang.com"
+    - link_to "http://o8.110chang.com", target: "_blank"
       i.fa.fa-external-link
+      span.outbound-label
+        | おやつ3賢人を見る
+
+
+section#about.page
+  h1.page-title
+    i.fa.fa-smile-o
+    | CODE EMITについて
+  .page-wrapper
+    p
+      | ウェブのフロントエンド技術を中心にしてウェブサイトやウェブアプリケーションを作成しています。
+    p
+      | 各種APIやJSONエンドポイントを利用したウェブアプリケーションのUIの提案や実装など承っております。
+    p
+      - link_to "http://110chang.com", target: "_blank"
+        i.fa.fa-external-link.inline-outbound
+        | ブログ
 
 section#contact.page
   h1.page-title
     i.fa.fa-envelope-o
     | お問合せ
-  form action="//formspree.io/yuji.ito@codemit.jp" method="POST" class="com-form"
+  form.com-form action="//formspree.io/yuji.ito@codemit.jp" method="POST"
     section.form-section
       label for="form-name"
         | お名前
