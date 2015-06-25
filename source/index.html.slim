@@ -16,53 +16,84 @@ section#codemit.page
   #codemit-logo.logo
     = partial "logo_codemit"
   #codemit-tagline.tagline
-    p
+    h1
       | HTML CSS JavaScript
 
 section#dokokara.page
-  #dokokara-logo.logo
-    svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110"
-      path fill="#FFFFFF" d="M110,110H0V0h60v25h25v25h25V110z M20,90h70V70H65V45H40V20H20V90z"
-  #dokokara-tagline.tagline
-    p
-      | Dokokara.info
-  .outbound
-    - link_to "http://dokokara.info", target: "_blank"
-      i.fa.fa-external-link
-      span.outbound-label
-        | Dokokara.infoを見る
+  .page-wrapper
+    #dokokara-logo.logo
+      svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110"
+        path fill="#FFFFFF" d="M110,110H0V0h60v25h25v25h25V110z M20,90h70V70H65V45H40V20H20V90z"
+    #dokokara-tagline.tagline
+      h2
+        | Dokokara.info
+    .outbound
+      - link_to "http://dokokara.info", target: "_blank"
+        i.fa.fa-external-link
+        span.outbound-label
+          | Dokokara.infoを見る
+    section.desc
+      .layout-wrapper
+        h3.desc-title
+          | Dokokara.info
+        p
+          | 現在地や出先の住所から一番近い東京メトロの出入口を検索するアプリです。
+        p
+          | knockout.jsを使用して各種APIとインタラクションの連携を行いました。
+      .sidebar
+        .ico-toggle-desc
+          i.fa.fa-chevron-right.fa-lg
 
 section#metloc.page
-  #metloc-logo.logo
-    = partial "logo_metloc"
-  .outbound
-    - link_to "http://metloc.info", target: "_blank"
-      i.fa.fa-external-link
-      span.outbound-label
-        | metloc.infoを見る
+  .page-wrapper
+    #metloc-logo.logo
+      = partial "logo_metloc"
+    .outbound
+      - link_to "http://metloc.info", target: "_blank"
+        i.fa.fa-external-link
+        span.outbound-label
+          | metloc.infoを見る
+    section.desc
+      .layout-wrapper
+        h3.desc-title
+          | metloc
+        p
+          | metlocは東京メトロAPIの列車ロケーション情報を一目で見渡せるように視覚化したウェブアプリケーションです。
+      .sidebar
+        .ico-toggle-desc
+          i.fa.fa-chevron-right.fa-lg
+
 
 section#oyatsu.page
-  #oyatsu-logo.logo
-    = partial "fig_three_wisemen"
-  #oyatsu-tagline.tagline
-    p
-      | おやつ3賢人
-  .outbound
-    - link_to "http://o8.110chang.com", target: "_blank"
-      i.fa.fa-external-link
-      span.outbound-label
-        | おやつ3賢人を見る
+  .page-wrapper
+    #oyatsu-logo.logo
+      = partial "fig_three_wisemen"
+    #oyatsu-tagline.tagline
+      h2
+        | おやつ3賢人
+    .outbound
+      - link_to "http://o8.110chang.com", target: "_blank"
+        i.fa.fa-external-link
+        span.outbound-label
+          | おやつ3賢人を見る
+    section.desc
+      .layout-wrapper
+        h3.desc-title
+          | おやつ3賢人
+        p
+          | Web Workers APIを使用して遺伝的アルゴリズムによっておやつの効用を最大化する組み合わせを計算します。
+      .sidebar
+        .ico-toggle-desc
+          i.fa.fa-chevron-right.fa-lg
 
 
 section#about.page
   h1.page-title
     i.fa.fa-smile-o
     | CODE EMITについて
-  .page-wrapper
+  .layout-wrapper
     p
       | ウェブのフロントエンド技術を中心にしてウェブサイトやウェブアプリケーションを作成しています。
-    p
-      | 各種APIやJSONエンドポイントを利用したウェブアプリケーションのUIの提案や実装など承っております。
     p
       - link_to "http://110chang.com", target: "_blank"
         i.fa.fa-external-link.inline-outbound
