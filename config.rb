@@ -96,7 +96,7 @@ helpers do
     name = ""
     ids.size.times do |i|
       tid = ids.take(i + 1).join('-')
-      path = "#{root}/source/js/main-#{tid}.js"
+      path = "#{root}/source/js/all-#{tid}.js"
       if File.exist?(path)
         name = "-" + tid
       end
