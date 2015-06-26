@@ -1,7 +1,6 @@
 ---
 id: "index"
 category: "index"
-label: "ホーム"
 layout: "layout"
 title: "CODE EMIT | HTML CSS JavaScript"
 keywords: ""
@@ -44,9 +43,16 @@ section#dokokara.page
           | 現在地や出先の住所から一番近い東京メトロの出入口を検索するアプリです。
         p
           | knockout.jsを使用して各種APIとインタラクションの連携を行いました。
+        p
+          - link_to "http://dokokara.info", target: "_blank"
+            i.fa.fa-external-link
+            | Dokokara.infoを見る
+
       .sidebar
         .ico-toggle-desc
           i.fa.fa-chevron-right.fa-lg
+      .close
+        i.fa.fa-times.fa-lg
 
 section#metloc.page
   .page-wrapper
@@ -63,9 +69,15 @@ section#metloc.page
           | metloc
         p
           | metlocは東京メトロAPIの列車ロケーション情報を一目で見渡せるように視覚化したウェブアプリケーションです。
+        p
+          - link_to "http://metloc.info", target: "_blank"
+            i.fa.fa-external-link
+            | metloc.infoを見る
       .sidebar
         .ico-toggle-desc
           i.fa.fa-chevron-right.fa-lg
+      .close
+        i.fa.fa-times.fa-lg
 
 
 section#oyatsu.page
@@ -86,9 +98,15 @@ section#oyatsu.page
           | おやつ3賢人
         p
           | Web Workers APIを使用して遺伝的アルゴリズムによっておやつの効用を最大化する組み合わせを計算します。
+        p
+          - link_to "http://o8.110chang.com", target: "_blank"
+            i.fa.fa-external-link
+            | おやつ3賢人を見る
       .sidebar
         .ico-toggle-desc
           i.fa.fa-chevron-right.fa-lg
+      .close
+        i.fa.fa-times.fa-lg
 
 
 section#about.page
@@ -98,6 +116,9 @@ section#about.page
   .layout-wrapper
     p
       | ウェブのフロントエンド技術を中心にしてウェブサイトやウェブアプリケーションを作成しています。
+    p
+      | 各種APIやJSONエンドポイントを利用したウェブアプリケーションのUIの提案や実装など承っております。
+
     p
       - link_to "http://110chang.com", target: "_blank"
         i.fa.fa-external-link.inline-outbound
