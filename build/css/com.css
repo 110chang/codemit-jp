@@ -552,6 +552,10 @@ input.placeholder {
   font-weight: bold;
 }
 
+.contact-msg {
+  text-align: center;
+}
+
 /* ===== footer ===== */
 #global-nav {
   position: fixed;
