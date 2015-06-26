@@ -185,13 +185,6 @@ input.placeholder {
   display: none;
 }
 
-.no-svg .logo svg {
-  display: none;
-}
-.no-svg .logo img {
-  display: inline;
-}
-
 .tagline {
   position: absolute;
   top: 20%;
@@ -276,6 +269,32 @@ input.placeholder {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+/* ===== no-svg ===== */
+#no-svg-msg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 1em;
+  background: #fff100;
+  color: black;
+}
+
+.no-svg .logo svg {
+  display: none;
+}
+.no-svg .logo img {
+  display: inline;
+}
+.no-svg #no-svg-msg {
+  display: block;
+}
+.no-svg #dokokara, .no-svg #metloc, .no-svg #oyatsu {
+  display: none;
 }
 
 /* ===== codemit.jp ===== */

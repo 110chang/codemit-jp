@@ -114,13 +114,6 @@ input.placeholder
   img
     display: none
 
-.no-svg
-  .logo
-    svg
-      display: none
-    img
-      display: inline
-
 .tagline
   position: absolute
   top: 20%
@@ -194,6 +187,34 @@ input.placeholder
 .page--show-desc
   .ico-toggle-desc
     transform: rotate(180deg)
+
+
+/* ===== no-svg ===== */
+
+#no-svg-msg
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 9999
+  width: 100%
+  padding: 1em
+  background: #FFF100
+  color: #000
+
+.no-svg
+  .logo
+    svg
+      display: none
+    img
+      display: inline
+
+  #no-svg-msg
+    display: block
+
+  #dokokara, #metloc, #oyatsu
+    display: none
+
 
 /* ===== codemit.jp ===== */
 
