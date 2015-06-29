@@ -97,7 +97,7 @@ input.placeholder
     margin-left: 40px
 
 .page-title
-  padding: 1em 0
+  padding: 0.75em 0
   font-size: 150%
   line-height: 140%
   text-align: center
@@ -373,13 +373,16 @@ $oyatsu-dark: shade(#FF6140, 20)
     margin-bottom: 0.5em
     padding: 0.25em
     border: 0
-    background: transparent
     font-family: $font-marugo
     font-size: 100%
     line-height: 140%
     background: #FFF
+  input::selection, textarea::selection
+    color: inherit
+  textarea
+    resize: vertical
 
-  +input-placeholder()
+  //+input-placeholder()
 
   input[type=submit]
     width: 100%
@@ -394,9 +397,28 @@ $oyatsu-dark: shade(#FF6140, 20)
 .contact-msg
   text-align: center
 
+.form-msg
+  display: inline-block
+  margin: 0.1em 0.2em
+  padding: 0.1em 0.3em
+  background: #999
+  border-radius: 2px
+  color: #FFF
+  font-weight: bold
+  font-size: 0.625rem
+  line-height: 120%
+  vertical-align: top
+  &:first-child
+    margin-left: 0.6em
+
+.form-msg--error
+  background: $sub-red
+.form-msg--valid
+  background: $dkr-green
+
 /* ===== footer ===== */
 
-#global-nav
+.global-nav
   position: fixed
   left: 0
   bottom: 5%
@@ -405,6 +427,7 @@ $oyatsu-dark: shade(#FF6140, 20)
   font-size: 1rem
   line-height: 120%
   letter-spacing: -0.35em
+  transition: bottom 0.25s cubic-bezier(1,0,0,1)
   li
     display: inline-block
     margin: 0 10px
@@ -425,6 +448,9 @@ $oyatsu-dark: shade(#FF6140, 20)
 
   .gnav-label
     display: none
+
+.gnav--hide
+  bottom: -10%
 
 /* ============================
  * 
@@ -513,7 +539,7 @@ $oyatsu-dark: shade(#FF6140, 20)
     input[type=submit]
       width: 50%
 
-  #global-nav
+  .global-nav
     a
       width: auto
       padding: 0 15px
