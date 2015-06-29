@@ -139,6 +139,57 @@ input.placeholder {
   position: relative;
 }
 
+.raise-action {
+  text-align: center;
+}
+.raise-action > * {
+  display: inline-block;
+}
+
+.button-skin {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #0085c0;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.button-skin:visited {
+  color: white;
+}
+.button-skin:focus {
+  color: #cce6f2;
+}
+.button-skin:hover {
+  color: #cce6f2;
+}
+.button-skin:active {
+  color: #cce6f2;
+}
+
+.button-skin--icon {
+  margin-right: 0.25em;
+}
+
+.button-skin--red {
+  background: #e7373c;
+  color: white;
+}
+.button-skin--red:visited {
+  color: white;
+}
+.button-skin--red:focus {
+  color: #fad7d8;
+}
+.button-skin--red:hover {
+  color: #fad7d8;
+}
+.button-skin--red:active {
+  color: #fad7d8;
+}
+
 .page {
   overflow: hidden;
   position: relative;
@@ -163,12 +214,13 @@ input.placeholder {
 }
 
 .page-title {
-  padding: 1em 0;
+  padding: 0.75em 0;
   font-size: 150%;
   line-height: 140%;
   text-align: center;
   color: #0085c0;
-  font-family: ".HiraKakuInterface-W1", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-family: "Source Sans Pro", ".HiraKakuInterface-W1", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-weight: lighter;
 }
 .page-title .fa {
   margin-right: 0.25em;
@@ -230,9 +282,11 @@ input.placeholder {
   top: 0;
   width: 100%;
   height: 100%;
+  padding: 20px 60px 20px 20px;
   background: #333333;
   color: white;
-  padding: 20px 60px 20px 20px;
+  font-size: 0.75rem;
+  line-height: 160%;
 }
 .desc p {
   margin: 1em 0;
@@ -463,6 +517,10 @@ input.placeholder {
 }
 
 /* ===== about ===== */
+#about {
+  font-size: 0.75rem;
+  line-height: 160%;
+}
 #about p {
   margin: 1em;
 }
@@ -499,99 +557,62 @@ input.placeholder {
   margin-bottom: 0.5em;
   padding: 0.25em;
   border: 0;
-  background: transparent;
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
   font-size: 100%;
   line-height: 140%;
   background: white;
 }
-.com-form input::-webkit-input-placeholder,
-.com-form textarea::-webkit-input-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
+.com-form input::-moz-selection, .com-form textarea::-moz-selection {
+  color: inherit;
 }
-.com-form input:focus::-webkit-input-placeholder,
-.com-form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
+.com-form input::selection, .com-form textarea::selection {
+  color: inherit;
 }
-.com-form input::-moz-placeholder,
-.com-form textarea::-moz-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input:focus::-moz-placeholder,
-.com-form textarea:focus::-moz-placeholder {
-  opacity: 0;
-}
-.com-form input:-ms-input-placeholder,
-.com-form textarea:-ms-input-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input:focus:-ms-input-placeholder,
-.com-form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-.com-form input::-webkit-input-placeholder,
-.com-form textarea::-webkit-input-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input::-moz-placeholder,
-.com-form textarea::-moz-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input:-ms-input-placeholder,
-.com-form textarea:-ms-input-placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input::placeholder,
-.com-form textarea::placeholder {
-  color: #999999;
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.com-form input:focus::-webkit-input-placeholder,
-.com-form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-.com-form input:focus::-moz-placeholder,
-.com-form textarea:focus::-moz-placeholder {
-  opacity: 0;
-}
-.com-form input:focus:-ms-input-placeholder,
-.com-form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-.com-form input:focus::placeholder,
-.com-form textarea:focus::placeholder {
-  opacity: 0;
+.com-form textarea {
+  resize: vertical;
 }
 .com-form input[type=submit] {
   width: 100%;
   padding: 0.5em;
-  background: #e7373c;
+  background: #0085c0;
   color: white;
   border-radius: 4px;
   letter-spacing: 1em;
   text-indent: 1em;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .contact-msg {
   text-align: center;
 }
 
+.form-msg {
+  display: inline-block;
+  margin: 0.1em 0.2em;
+  padding: 0.1em 0.3em;
+  background: #999999;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.625rem;
+  line-height: 120%;
+  vertical-align: top;
+}
+.form-msg:first-child {
+  margin-left: 0.6em;
+}
+
+.form-msg--error {
+  background: #e7373c;
+}
+
+.form-msg--valid {
+  background: #0085c0;
+}
+
 /* ===== footer ===== */
-#global-nav {
+.global-nav {
   position: fixed;
   left: 0;
   bottom: 5%;
@@ -600,13 +621,14 @@ input.placeholder {
   font-size: 1rem;
   line-height: 120%;
   letter-spacing: -0.35em;
+  transition: bottom 0.25s cubic-bezier(1, 0, 0, 1);
 }
-#global-nav li {
+.global-nav li {
   display: inline-block;
   margin: 0 10px;
   letter-spacing: 0;
 }
-#global-nav a {
+.global-nav a {
   display: block;
   width: 40px;
   height: 40px;
@@ -617,24 +639,36 @@ input.placeholder {
   color: white;
   transition: all 0.25s ease-in-out;
 }
-#global-nav a:visited {
+.global-nav a:visited {
   color: white;
 }
-#global-nav a:focus {
+.global-nav a:focus {
   color: white;
 }
-#global-nav a:hover {
+.global-nav a:hover {
   color: white;
 }
-#global-nav a:active {
+.global-nav a:active {
   color: white;
 }
-#global-nav a:hover, #global-nav a:active {
+.global-nav a:hover, .global-nav a:active {
+  background: white;
+  color: #0085c0;
+}
+.global-nav .gnav-label {
+  display: none;
+}
+
+.gnav-sub-color a {
+  background: #e7373c;
+}
+.gnav-sub-color a:hover, .gnav-sub-color a:active {
   background: white;
   color: #e7373c;
 }
-#global-nav .gnav-label {
-  display: none;
+
+.gnav--hide {
+  bottom: -10%;
 }
 
 /* ============================
@@ -651,6 +685,11 @@ input.placeholder {
   .tagline p {
     font-size: 200%;
     line-height: 140%;
+  }
+
+  .desc {
+    font-size: 1rem;
+    line-height: 180%;
   }
 
   .outbound-label {
@@ -690,6 +729,12 @@ input.placeholder {
     margin: -80px -200px;
   }
 
+  /* ===== about ===== */
+  #about {
+    font-size: 1rem;
+    line-height: 160%;
+  }
+
   /* ===== contact ===== */
   .com-form .form-section {
     width: 100%;
@@ -710,11 +755,11 @@ input.placeholder {
     width: 50%;
   }
 
-  #global-nav a {
+  .global-nav a {
     width: auto;
     padding: 0 15px;
   }
-  #global-nav .gnav-label {
+  .global-nav .gnav-label {
     display: inline;
     margin-left: 0.25em;
   }

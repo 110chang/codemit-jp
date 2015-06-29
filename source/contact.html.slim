@@ -1,0 +1,64 @@
+---
+id: "contact"
+category: "contact"
+layout: "layout"
+title: "お問合せ | CODE EMIT"
+keywords: ""
+description: ""
+---
+
+/
+/ Contact
+/
+
+section#contact.page
+  h1.page-title
+    i.fa.fa-envelope-o
+    | お問合せ
+  form.com-form action="//formspree.io/yuji.ito@codemit.jp" method="POST" data-bind="submit: onSubmit" novalidate="novalidate"
+    input type="hidden" name="_next" value="/thanks/"
+    section.form-section
+      label for="form-name"
+        | お名前
+        /! ko if: !nameRequireMsg()
+        span.form-msg.form-msg--error
+          | 必須事項です
+        /! /ko
+        /! ko if: nameRequireMsg
+        span.form-msg.form-msg--valid
+          | OK
+        /! /ko
+      input type="text" name="name" id="form-name" placeholder="高土　栄三" data-bind="value: name, valueUpdate: 'afterkeydown'"
+    section.form-section
+      label for="form-email"
+        | メールアドレス
+        /! ko if: !emailRequireMsg()
+        span.form-msg.form-msg--error
+          | 必須事項です
+        /! /ko
+        /! ko if: !emailEmailMsg()
+        span.form-msg.form-msg--error
+          | メールアドレスが正しくありません
+        /! /ko
+        /! ko if: emailRequireMsg() && emailEmailMsg()
+        span.form-msg.form-msg--valid
+          | OK
+        /! /ko
+      input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com" data-bind="value: email, valueUpdate: 'keypress'"
+    section.form-section
+      label for="form-question"
+        | お問合せ内容
+        /! ko if: !questionRequireMsg()
+        span.form-msg.form-msg--error
+          | 必須事項です
+        /! /ko
+        /! ko if: questionRequireMsg
+        span.form-msg.form-msg--valid
+          | OK
+        /! /ko
+      textarea name="question" id="form-question" placeholder="お問い合わせ内容を入力してください" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"
+    input type="text" name="_gotcha" style="display:none"
+    section.form-action
+      input.form-btn-submit type="submit" value="送信"
+
+/

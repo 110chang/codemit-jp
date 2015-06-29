@@ -19,7 +19,11 @@
  * ============================ */
 
 $key-blue: #0085C0
+$key-blue-lite: tint(#0085C0, 20)
+$key-blue-pale: tint(#0085C0, 80)
 $sub-red: #E7373C
+$sub-red-lite: tint(#E7373C, 20)
+$sub-red-pale: tint(#E7373C, 80)
 
 $font-marugo: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6","Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo"
 
@@ -73,6 +77,29 @@ input.placeholder
 #main
   height: 100%
   position: relative
+
+.raise-action
+  text-align: center
+  &>*
+    display: inline-block
+
+.button-skin
+  display: inline-block
+  padding: 0.5em 1em
+  background: $key-blue
+  color: #FFF
+  border-radius: 4px
+  //letter-spacing: 1em
+  //text-indent: 1em
+  font-weight: bold
+  text-decoration: none
+  +link-colors(#FFF, $key-blue-pale, $key-blue-pale, #FFF, $key-blue-pale)//n-h-a-v-f
+
+.button-skin--icon
+  margin-right: 0.25em
+.button-skin--red
+  background: $sub-red
+  +link-colors(#FFF, $sub-red-pale, $sub-red-pale, #FFF, $sub-red-pale)//n-h-a-v-f
 
 .page
   overflow: hidden
@@ -387,12 +414,13 @@ $oyatsu-dark: shade(#FF6140, 20)
   input[type=submit]
     width: 100%
     padding: 0.5em
-    background: $sub-red
+    background: $key-blue
     color: #FFF
     border-radius: 4px
     letter-spacing: 1em
     text-indent: 1em
     font-weight: bold
+    cursor: pointer
 
 .contact-msg
   text-align: center
@@ -414,7 +442,7 @@ $oyatsu-dark: shade(#FF6140, 20)
 .form-msg--error
   background: $sub-red
 .form-msg--valid
-  background: $dkr-green
+  background: $key-blue
 
 /* ===== footer ===== */
 
@@ -444,10 +472,16 @@ $oyatsu-dark: shade(#FF6140, 20)
     transition: all 0.25s ease-in-out
     &:hover, &:active
       background: #FFF
-      color: $sub-red
+      color: $key-blue
 
   .gnav-label
     display: none
+.gnav-sub-color
+  a
+    background: $sub-red
+    &:hover, &:active
+      background: #FFF
+      color: $sub-red
 
 .gnav--hide
   bottom: -10%

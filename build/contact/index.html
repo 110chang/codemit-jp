@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>お問合せ | CODE EMIT</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    <meta name="author" content="yuji ito">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css">
+    <link href="../css/com.css" media="all" rel="stylesheet">
+    <script src="../js/lib/modernizr.js"></script>
+    <script src="../js/all-contact.js"></script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-380616-9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+  </head>
+  
+  <body id="contact" class="cat-contact">
+    <article id="main"><section id="contact" class="page">
+  <h1 class="page-title">
+    <i class="fa fa-envelope-o"></i>お問合せ
+  </h1>
+  <form class="com-form" action="//formspree.io/yuji.ito@codemit.jp" method="POST" data-bind="submit: onSubmit" novalidate="novalidate">
+    <input type="hidden" name="_next" value="/thanks/">
+    <section class="form-section">
+      <label for="form-name">お名前<!--ko if: !nameRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: nameRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><input type="text" name="name" id="form-name" placeholder="高土　栄三" data-bind="value: name, valueUpdate: 'afterkeydown'">
+    </section>
+    <section class="form-section">
+      <label for="form-email">メールアドレス<!--ko if: !emailRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: !emailEmailMsg()--><span class="form-msg form-msg--error">メールアドレスが正しくありません</span><!--/ko--><!--ko if: emailRequireMsg() && emailEmailMsg()--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com" data-bind="value: email, valueUpdate: 'keypress'">
+    </section>
+    <section class="form-section">
+      <label for="form-question">お問合せ内容<!--ko if: !questionRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: questionRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><textarea name="question" id="form-question" placeholder="お問い合わせ内容を入力してください" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"></textarea>
+    </section>
+    <input type="text" name="_gotcha" style="display:none">
+    <section class="form-action">
+      <input class="form-btn-submit" type="submit" value="送信">
+    </section>
+  </form>
+</section>
+    </article>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="/#/codemit"><i class="fa fa-home fa-lg"></i></a>
+        </li>
+        <li><a href="/#/about">
+          <i class="fa fa-smile-o fa-lg"></i><span class="gnav-label">CODE EMITについて</span></a>
+        </li>
+      </ul>
+    </nav>
+    
+  </body>
+</html>
