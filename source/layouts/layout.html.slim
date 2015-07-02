@@ -56,5 +56,5 @@ html lang="ja"
     article#main
       = yield
     = NEWLINE
-    = partial 'footer'
+    = partial 'footer', locals: { id: current_page.data.id }
 
