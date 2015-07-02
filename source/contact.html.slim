@@ -36,15 +36,17 @@ section#contact.page
         span.form-msg.form-msg--error
           | 必須事項です
         /! /ko
-        /! ko if: !emailEmailMsg()
-        span.form-msg.form-msg--error
-          | メールアドレスが正しくありません
-        /! /ko
         /! ko if: emailRequireMsg() && emailEmailMsg()
         span.form-msg.form-msg--valid
           | OK
         /! /ko
-      input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com" data-bind="value: email, valueUpdate: 'keypress'"
+        /! ko if: emailValidationStart
+        /! ko if: !emailEmailMsg()
+        span.form-msg.form-msg--error
+          | メールアドレスが正しくありません
+        /! /ko
+        /! /ko
+      input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com" data-bind="value: email, valueUpdate: 'afterkeydown'"
     section.form-section
       label for="form-question"
         | お問合せ内容
@@ -56,7 +58,7 @@ section#contact.page
         span.form-msg.form-msg--valid
           | OK
         /! /ko
-      textarea name="question" id="form-question" placeholder="お問い合わせ内容を入力してください" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"
+      textarea name="question" id="form-question" placeholder="お問合せ内容を入力してください" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"
     input type="text" name="_gotcha" style="display:none"
     section.form-action
       input.form-btn-submit type="submit" value="送信"

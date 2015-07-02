@@ -581,6 +581,11 @@ input.placeholder {
   text-indent: 1em;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.com-form input[type=submit]:hover {
+  background: white;
+  color: #0085c0;
 }
 
 .contact-msg {
