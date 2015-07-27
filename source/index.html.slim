@@ -22,6 +22,37 @@ section#codemit.page
     h1
       | HTML CSS JavaScript
 
+section#snowflakes.page
+  .page-wrapper
+    #snowflakes-logo.logo
+      = partial "logo_snowflakes"
+    .outbound
+      - link_to "https://cssnowflakes.herokuapp.com/", target: "_blank"
+        i.fa.fa-external-link
+        span.outbound-label
+          | CSSnowflakesを見る
+    #snowflakes-tagline.tagline
+      h2
+        | CSSnowflakes
+    section.desc
+      .layout-wrapper
+        h3.desc-title
+          | CSSnowflakes
+        p
+          | ウェブサイトのテキストを取得してYahoo!の日本語形態素解析APIに渡し、その結果を雪のように降らすウェブアプリです。
+        p
+          | 小さいですが、はじめてのRubyアプリケーションで、フレームワークにSinatraを使い、Herokuにデプロイしました。
+        p
+          - link_to "https://cssnowflakes.herokuapp.com/", target: "_blank"
+            i.fa.fa-external-link
+            | CSSnowflakesを見る
+
+      .sidebar
+        .ico-toggle-desc
+          i.fa.fa-chevron-right.fa-lg
+      .close
+        i.fa.fa-times.fa-lg
+
 section#dokokara.page
   .page-wrapper
     #dokokara-logo.logo
@@ -122,16 +153,18 @@ section#about.page
       | ウェブのフロントエンド技術を中心にしてウェブサイトやウェブアプリケーションを作成しています。
     p
       | 各種APIやJSONエンドポイントを利用したウェブアプリケーションのUIの提案や実装など承ります。
-
     p
-      - link_to "http://110chang.com", target: "_blank"
-        i.fa.fa-external-link.inline-outbound
-        | ブログ
+      | シンプルで、美しいインターフェースを目指します。
     .raise-action
       - link_to "/contact/index.html", class: "button-skin button-skin--red"
         i.fa.fa-envelope.button-skin--icon
         | お問合せ
-
+    p
+      | 伊藤　雄次
+    p
+      - link_to "http://110chang.com", target: "_blank"
+        i.fa.fa-external-link.inline-outbound
+        | ブログ
 /section#contact.page
 /  h1.page-title
 /    i.fa.fa-envelope-o

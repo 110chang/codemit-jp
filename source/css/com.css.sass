@@ -287,6 +287,26 @@ input.placeholder
   .fa
     margin-right: 0.25em
 
+/* ===== snowflakes ===== */
+
+#snowflakes
+  +background-image(radial-gradient(#DDD 0, #999 100%))
+  color: #FFF
+  a
+    +link-colors(#FFF, #EEE, #EEE, #FFF, #EEE)//n-h-a-v-f
+  .logo
+    width: 128px
+    height: 128px
+    margin: -64px
+  .tagline
+    font-family: "Montserrat", sans-serif
+    letter-spacing: 1px
+    color: #FFF
+  .desc
+    background: #666
+  .desc-title
+    font-family: "Montserrat", sans-serif
+    letter-spacing: 1px
 
 /* ===== dokokara.info ===== */
 
@@ -504,7 +524,7 @@ $oyatsu-dark: shade(#FF6140, 20)
     margin: 0 auto
 
   .tagline
-    p
+    h1, h2
       font-size: 200%
       line-height: 140%
 
@@ -522,6 +542,14 @@ $oyatsu-dark: shade(#FF6140, 20)
   /* ===== codemit.jp ===== */
 
   #codemit
+    .logo
+      width: 256px
+      height: 256px
+      margin: -128px
+
+  /* ===== snowflakes ===== */
+
+  #snowflakes
     .logo
       width: 256px
       height: 256px

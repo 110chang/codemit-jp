@@ -395,6 +395,44 @@ input.placeholder {
   margin-right: 0.25em;
 }
 
+/* ===== snowflakes ===== */
+#snowflakes {
+  background-image: radial-gradient(#dddddd 0%, #999999 100%);
+  color: white;
+}
+#snowflakes a {
+  color: white;
+}
+#snowflakes a:visited {
+  color: white;
+}
+#snowflakes a:focus {
+  color: #eeeeee;
+}
+#snowflakes a:hover {
+  color: #eeeeee;
+}
+#snowflakes a:active {
+  color: #eeeeee;
+}
+#snowflakes .logo {
+  width: 128px;
+  height: 128px;
+  margin: -64px;
+}
+#snowflakes .tagline {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  color: white;
+}
+#snowflakes .desc {
+  background: #666666;
+}
+#snowflakes .desc-title {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
 /* ===== dokokara.info ===== */
 #dokokara {
   background: #29ca83;
@@ -687,7 +725,7 @@ input.placeholder {
     margin: 0 auto;
   }
 
-  .tagline p {
+  .tagline h1, .tagline h2 {
     font-size: 200%;
     line-height: 140%;
   }
@@ -708,6 +746,13 @@ input.placeholder {
 
   /* ===== codemit.jp ===== */
   #codemit .logo {
+    width: 256px;
+    height: 256px;
+    margin: -128px;
+  }
+
+  /* ===== snowflakes ===== */
+  #snowflakes .logo {
     width: 256px;
     height: 256px;
     margin: -128px;
