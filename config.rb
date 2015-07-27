@@ -157,6 +157,13 @@ end
 # configure :development do
 #   activate :php
 # end
+configure :development do
+  activate :livereload, ignore: [
+    "#{root}/bower_components/*",
+    "#{root}/node_modules/*",
+    "#{root}/lib/*"
+  ]
+end
 
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer > 8']
