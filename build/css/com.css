@@ -56,7 +56,7 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -75,8 +75,8 @@ body {
   height: 100%;
   font-size: 100%;
   line-height: 140%;
-  color: #333333;
-  background: #f8f8f0;
+  color: #333;
+  background: #F8F8F0;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -90,19 +90,19 @@ strong {
 }
 
 a {
-  color: #0085c0;
+  color: #0085C0;
 }
 a:visited {
-  color: #0085c0;
+  color: #0085C0;
 }
 a:focus {
-  color: #e7373c;
+  color: #E7373C;
 }
 a:hover {
-  color: #e7373c;
+  color: #E7373C;
 }
 a:active {
-  color: #e7373c;
+  color: #E7373C;
 }
 
 input {
@@ -111,22 +111,22 @@ input {
 }
 
 input.placeholder {
-  color: #999999;
+  color: #999;
 }
 
 ::-moz-selection {
-  background: #e7373c;
-  color: white;
+  background: #E7373C;
+  color: #FFF;
 }
 
 ::selection {
-  background: #e7373c;
-  color: white;
+  background: #E7373C;
+  color: #FFF;
 }
 
 ::-moz-selection {
-  background: #e7373c;
-  color: white;
+  background: #E7373C;
+  color: #FFF;
 }
 
 /* ============================
@@ -149,24 +149,24 @@ input.placeholder {
 .button-skin {
   display: inline-block;
   padding: 0.5em 1em;
-  background: #0085c0;
-  color: white;
+  background: #0085C0;
+  color: #FFF;
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: #FFF;
 }
 .button-skin:visited {
-  color: white;
+  color: #FFF;
 }
 .button-skin:focus {
-  color: #cce6f2;
+  color: #cce7f2;
 }
 .button-skin:hover {
-  color: #cce6f2;
+  color: #cce7f2;
 }
 .button-skin:active {
-  color: #cce6f2;
+  color: #cce7f2;
 }
 
 .button-skin--icon {
@@ -174,11 +174,11 @@ input.placeholder {
 }
 
 .button-skin--red {
-  background: #e7373c;
-  color: white;
+  background: #E7373C;
+  color: #FFF;
 }
 .button-skin--red:visited {
-  color: white;
+  color: #FFF;
 }
 .button-skin--red:focus {
   color: #fad7d8;
@@ -218,7 +218,7 @@ input.placeholder {
   font-size: 150%;
   line-height: 140%;
   text-align: center;
-  color: #0085c0;
+  color: #0085C0;
   font-family: "Source Sans Pro", ".HiraKakuInterface-W1", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
   font-weight: lighter;
 }
@@ -244,7 +244,7 @@ input.placeholder {
   cursor: default;
   font-size: 100%;
   font-family: "Source Sans Pro", sans-serif;
-  color: #e7373c;
+  color: #E7373C;
 }
 
 .outbound {
@@ -283,8 +283,8 @@ input.placeholder {
   width: 100%;
   height: 100%;
   padding: 20px 60px 20px 20px;
-  background: #333333;
-  color: white;
+  background: #333;
+  color: #FFF;
   font-size: 0.75rem;
   line-height: 160%;
 }
@@ -353,8 +353,8 @@ input.placeholder {
   z-index: 9999;
   width: 100%;
   padding: 1em;
-  background: #fff100;
-  color: black;
+  background: #FFF100;
+  color: #000;
 }
 
 .no-svg .logo svg {
@@ -387,8 +387,8 @@ input.placeholder {
   border-radius: 4px;
   text-align: center;
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
-  background: #0085c0;
-  color: white;
+  background: #0085C0;
+  color: #FFF;
   cursor: pointer;
 }
 #goto-contact .fa {
@@ -397,23 +397,25 @@ input.placeholder {
 
 /* ===== snowflakes ===== */
 #snowflakes {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzk5OTk5OSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: radial-gradient(#dddddd 0%, #999999 100%);
-  color: white;
+  color: #FFF;
 }
 #snowflakes a {
-  color: white;
+  color: #FFF;
 }
 #snowflakes a:visited {
-  color: white;
+  color: #FFF;
 }
 #snowflakes a:focus {
-  color: #eeeeee;
+  color: #EEE;
 }
 #snowflakes a:hover {
-  color: #eeeeee;
+  color: #EEE;
 }
 #snowflakes a:active {
-  color: #eeeeee;
+  color: #EEE;
 }
 #snowflakes .logo {
   width: 128px;
@@ -423,10 +425,10 @@ input.placeholder {
 #snowflakes .tagline {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  color: white;
+  color: #FFF;
 }
 #snowflakes .desc {
-  background: #666666;
+  background: #666;
 }
 #snowflakes .desc-title {
   font-family: "Montserrat", sans-serif;
@@ -435,23 +437,23 @@ input.placeholder {
 
 /* ===== dokokara.info ===== */
 #dokokara {
-  background: #29ca83;
-  color: white;
+  background: #29CA83;
+  color: #FFF;
 }
 #dokokara a {
-  color: white;
+  color: #FFF;
 }
 #dokokara a:visited {
-  color: white;
+  color: #FFF;
 }
 #dokokara a:focus {
-  color: #e9f9f2;
+  color: #eafaf3;
 }
 #dokokara a:hover {
-  color: #e9f9f2;
+  color: #eafaf3;
 }
 #dokokara a:active {
-  color: #e9f9f2;
+  color: #eafaf3;
 }
 #dokokara .logo {
   width: 110px;
@@ -461,10 +463,10 @@ input.placeholder {
 #dokokara .tagline {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  color: white;
+  color: #FFF;
 }
 #dokokara .desc {
-  background: #20a168;
+  background: #21a269;
 }
 #dokokara .desc-title {
   font-family: "Montserrat", sans-serif;
@@ -473,14 +475,14 @@ input.placeholder {
 
 /* ===== metloc.info ===== */
 #metloc {
-  background: white;
-  color: #00182c;
+  background: #FFF;
+  color: #00182C;
 }
 #metloc a {
-  color: #00182c;
+  color: #00182C;
 }
 #metloc a:visited {
-  color: #00182c;
+  color: #00182C;
 }
 #metloc a:focus {
   color: #334656;
@@ -497,46 +499,46 @@ input.placeholder {
   margin: -40px -103px;
 }
 #metloc .desc {
-  background: #00182c;
+  background: #00182C;
 }
 #metloc .desc a {
-  color: white;
+  color: #FFF;
 }
 #metloc .desc a:visited {
-  color: white;
+  color: #FFF;
 }
 #metloc .desc a:focus {
-  color: #ccd0d4;
+  color: #ccd1d5;
 }
 #metloc .desc a:hover {
-  color: #ccd0d4;
+  color: #ccd1d5;
 }
 #metloc .desc a:active {
-  color: #ccd0d4;
+  color: #ccd1d5;
 }
 #metloc .ico-toggle-desc {
-  color: #00182c;
+  color: #00182C;
 }
 
 /* ===== oyatsu ===== */
 #oyatsu {
-  background: #ff8b73;
-  color: white;
+  background: #FF8B73;
+  color: #FFF;
 }
 #oyatsu a {
-  color: white;
+  color: #FFF;
 }
 #oyatsu a:visited {
-  color: white;
+  color: #FFF;
 }
 #oyatsu a:focus {
-  color: #ffebe7;
+  color: #FFEBE7;
 }
 #oyatsu a:hover {
-  color: #ffebe7;
+  color: #FFEBE7;
 }
 #oyatsu a:active {
-  color: #ffebe7;
+  color: #FFEBE7;
 }
 #oyatsu .logo {
   width: 200px;
@@ -544,11 +546,11 @@ input.placeholder {
   margin: -40px -100px;
 }
 #oyatsu .tagline {
-  color: white;
+  color: #FFF;
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
 }
 #oyatsu .desc {
-  background: #ff6140;
+  background: #FF6140;
 }
 #oyatsu .desc-title {
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
@@ -581,7 +583,7 @@ input.placeholder {
   box-sizing: border-box;
   display: block;
   padding: 0.25em 0.35em;
-  color: #0085c0;
+  color: #0085C0;
   font-size: 0.75rem;
   line-height: 140%;
 }
@@ -598,7 +600,7 @@ input.placeholder {
   font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", "メイリオ", "Meiryo";
   font-size: 100%;
   line-height: 140%;
-  background: white;
+  background: #FFF;
 }
 .com-form input::-moz-selection, .com-form textarea::-moz-selection {
   color: inherit;
@@ -612,8 +614,8 @@ input.placeholder {
 .com-form input[type=submit] {
   width: 100%;
   padding: 0.5em;
-  background: #0085c0;
-  color: white;
+  background: #0085C0;
+  color: #FFF;
   border-radius: 4px;
   letter-spacing: 1em;
   text-indent: 1em;
@@ -622,8 +624,8 @@ input.placeholder {
   transition: all 0.25s ease-in-out;
 }
 .com-form input[type=submit]:hover {
-  background: white;
-  color: #0085c0;
+  background: #FFF;
+  color: #0085C0;
 }
 
 .contact-msg {
@@ -634,9 +636,9 @@ input.placeholder {
   display: inline-block;
   margin: 0.1em 0.2em;
   padding: 0.1em 0.3em;
-  background: #999999;
+  background: #999;
   border-radius: 2px;
-  color: white;
+  color: #FFF;
   font-weight: bold;
   font-size: 0.625rem;
   line-height: 120%;
@@ -647,11 +649,11 @@ input.placeholder {
 }
 
 .form-msg--error {
-  background: #e7373c;
+  background: #E7373C;
 }
 
 .form-msg--valid {
-  background: #0085c0;
+  background: #0085C0;
 }
 
 /* ===== footer ===== */
@@ -676,38 +678,38 @@ input.placeholder {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background: #0085c0;
+  background: #0085C0;
   line-height: 40px;
   text-decoration: none;
-  color: white;
+  color: #FFF;
   transition: all 0.25s ease-in-out;
 }
 .global-nav a:visited {
-  color: white;
+  color: #FFF;
 }
 .global-nav a:focus {
-  color: white;
+  color: #FFF;
 }
 .global-nav a:hover {
-  color: white;
+  color: #FFF;
 }
 .global-nav a:active {
-  color: white;
+  color: #FFF;
 }
 .global-nav a:hover, .global-nav a:active {
-  background: white;
-  color: #0085c0;
+  background: #FFF;
+  color: #0085C0;
 }
 .global-nav .gnav-label {
   display: none;
 }
 
 .gnav-sub-color a {
-  background: #e7373c;
+  background: #E7373C;
 }
 .gnav-sub-color a:hover, .gnav-sub-color a:active {
-  background: white;
-  color: #e7373c;
+  background: #FFF;
+  color: #E7373C;
 }
 
 .gnav--hide {
