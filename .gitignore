@@ -31,3 +31,5 @@ gruntfile.js
 
 # Ignore compass sprite cache
 /**/sprite_*-s*.png
+
+.env

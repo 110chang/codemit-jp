@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    image: nginx
+    restart: always
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./build/:/usr/share/nginx/html:ro
+    environment:
+      - DOMAIN
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - web
+    restart: always
+    environment:
+      STAGE: "${ENVIRONMENT}"
+      DOMAINS: "${DOMAIN} -> http://web:8000"
