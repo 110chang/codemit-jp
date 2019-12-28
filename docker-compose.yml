@@ -19,3 +19,5 @@ services:
     environment:
       STAGE: "${ENVIRONMENT}"
       DOMAINS: "${DOMAIN} -> http://web:8000"
+    volumes:
+      - /var/lib/https-portal:/var/lib/https-portal
