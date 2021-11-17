@@ -576,8 +576,14 @@ input.placeholder {
 .com-form .form-section:first-child {
   border-top: 0;
 }
-.com-form .form-action {
+.com-form .form-section p {
+  width: 50%;
+  margin: auto;
+}
+.com-form .notes {
   padding: 10px;
+  color: #E7373C;
+  text-align: center;
 }
 .com-form label {
   box-sizing: border-box;
@@ -608,6 +614,9 @@ input.placeholder {
 .com-form input::selection, .com-form textarea::selection {
   color: inherit;
 }
+.com-form input:disabled, .com-form textarea:disabled {
+  cursor: not-allowed;
+}
 .com-form textarea {
   resize: vertical;
 }
@@ -626,6 +635,11 @@ input.placeholder {
 .com-form input[type=submit]:hover {
   background: #FFF;
   color: #0085C0;
+}
+.com-form input[type=submit]:disabled {
+  background: #FFF;
+  color: #999;
+  cursor: not-allowed;
 }
 
 .contact-msg {
