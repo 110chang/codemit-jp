@@ -34,20 +34,23 @@
   <h1 class="page-title">
     <i class="fa fa-envelope-o"></i>お問合せ
   </h1>
-  <form class="com-form" action="//formspree.io/yuji.ito@codemit.jp" method="POST" data-bind="submit: onSubmit" novalidate="novalidate">
+  <form class="com-form" action="__disabled__" method="POST" data-bind="submit: onSubmit" novalidate="novalidate">
     <input type="hidden" name="_next" value="/thanks/">
     <section class="form-section">
-      <label for="form-name">お名前<!--ko if: !nameRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: nameRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><input type="text" name="name" id="form-name" placeholder="高土　栄三" data-bind="value: name, valueUpdate: 'afterkeydown'">
+      <label for="form-name">お名前<!--ko if: !nameRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: nameRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><input disabled type="text" name="name" id="form-name" data-bind="value: name, valueUpdate: 'afterkeydown'">
     </section>
     <section class="form-section">
-      <label for="form-email">メールアドレス<!--ko if: !emailRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: emailRequireMsg() && emailEmailMsg()--><span class="form-msg form-msg--valid">OK</span><!--/ko--><!--ko if: emailValidationStart--><!--ko if: !emailEmailMsg()--><span class="form-msg form-msg--error">メールアドレスが正しくありません</span><!--/ko--><!--/ko--></label><input type="email" name="_replyto" id="form-email" placeholder="codemit@example.com" data-bind="value: email, valueUpdate: 'afterkeydown'">
+      <label for="form-email">メールアドレス<!--ko if: !emailRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: emailRequireMsg() && emailEmailMsg()--><span class="form-msg form-msg--valid">OK</span><!--/ko--><!--ko if: emailValidationStart--><!--ko if: !emailEmailMsg()--><span class="form-msg form-msg--error">メールアドレスが正しくありません</span><!--/ko--><!--/ko--></label><input disabled type="email" name="_replyto" id="form-email" data-bind="value: email, valueUpdate: 'afterkeydown'">
     </section>
     <section class="form-section">
-      <label for="form-question">お問合せ内容<!--ko if: !questionRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: questionRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><textarea name="question" id="form-question" placeholder="お問合せ内容を入力してください" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"></textarea>
+      <label for="form-question">お問合せ内容<!--ko if: !questionRequireMsg()--><span class="form-msg form-msg--error">必須事項です</span><!--/ko--><!--ko if: questionRequireMsg--><span class="form-msg form-msg--valid">OK</span><!--/ko--></label><textarea disabled name="question" id="form-question" rows="3" data-bind="value: question, valueUpdate: 'afterkeydown'"></textarea>
     </section>
     <input type="text" name="_gotcha" style="display:none">
     <section class="form-action">
-      <input class="form-btn-submit" type="submit" value="送信">
+      <input class="form-btn-submit" disabled type="submit" value="送信">
+    </section>
+    <section class="form-section notes">
+      <p>現在、お問合せは利用できません</p>
     </section>
   </form>
 </section>
